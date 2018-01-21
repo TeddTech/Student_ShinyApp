@@ -8,4 +8,4 @@ Data visualization 2 project
 | Documentation| ![Documentation](https://github.com/TeddTech/Student_ShinyApp/blob/master/Documentation.md)|
 | Raw Data | ![data](https://github.com/TeddTech/Student_ShinyApp/blob/master/marks_data.csv) |
 
-DSCI 523 lab_4 for TED THOMPSON (tedd)
+TED THOMPSON 2018
