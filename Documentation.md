@@ -6,28 +6,28 @@ This app predicts student grades based on the inputs given and allows users to s
 
 ![](pics/2age.JPG)
 
-Enter the student age using a slider input
+Enter the student age using a slider input.
 
 ![](pics/3sex.JPG)
 
-Enter the students sex using a radio input
+Enter the students sex using a radio input.
 
 ![](pics/4guard.JPG)
 
-Select what guardian a student has
+Select what guardian a student has.
 
 ![](pics/5internet.JPG)
 
-Select if a student has access to internet at home or not
+Select if a student has access to internet at home or not.
 
 ![](pics/6relationship.JPG)
 
-Select if student is in a relationship or not
+Select if student is in a relationship or not.
 
 ![](pics/7study.JPG)
 
-Select how many hours a day a student studies
+Select how many hours a day a student studies.
 
 ![](pics/8free.JPG)
 
-Select how many hours a day of free time a student has
+Select how many hours a day of free time a student has.
