@@ -18,7 +18,7 @@ model1 <- lm(G1~age+studytime+failures+freetime+health, data = Student)
 model2 <- lm(G2~age+studytime+failures+freetime+health, data = Student)
 model3 <- lm(G3~age+studytime+failures+freetime+health, data = Student)
 
-# Define UI for application that draws a histogram
+# Define Inputs
 ui <- fluidPage(
    titlePanel('Grade Predictor'),
    sidebarLayout(
@@ -45,12 +45,12 @@ ui <- fluidPage(
 
 )
 
-# Define server logic required to draw a histogram
+# Define output
 server <- function(input, output) {
   output$gapplot <- renderPlot({
     Stu_dat <- 
       Student %>% 
-      filter(age >= input$AgeInput-2,
+      filter(age >= input$AgeInput-2,     #filter data accorging to inputs
              age < input$AgeInput+2,
              sex == input$SexID,
              guardian == input$GuardianID,
@@ -58,20 +58,20 @@ server <- function(input, output) {
              )
     
     
-    Stu_pred <- data.frame(age = input$AgeInput,
+    Stu_pred <- data.frame(age = input$AgeInput,     #select predictors form filter data frame to put inside model 
                            studytime = (input$StudyTimeID[1]+input$StudyTimeID[2])/2,
                            failures = mean(Stu_dat$failures),
                            freetime = (input$FreeTimeID[1]+input$FreeTimeID[2])/2,
                            health = mean(Stu_dat$failures)
                            )
-    
+    #Predict each grade
     G <- predict(model, Stu_pred)
     G1 <- predict(model1, Stu_pred)
     G2 <- predict(model2, Stu_pred)
     G3 <- predict(model3, Stu_pred)
     
     
-
+    #Plot each grade
     dat_bar <- data.frame(grade = c('1st Grade','2nd Grade','3rd Grade','Average Grade'), mark = c(G1,G2,G3,G))
     
     ggplot(dat_bar, aes(x=grade, y=mark, fill=grade)) + geom_bar(stat = 'identity') + ggtitle('Grade Predictor') +
