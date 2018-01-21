@@ -1,7 +1,21 @@
 # Documentation
 
-![](pic/1intro.jpg)
+![](pics/1intro.jpg)
 
+
+![](pics/2age.jpg)
+
+![](pics/3sex.jpg)
+
+![](pics/4guard.jpg)
+
+![](pics/5internet.jpg)
+
+![](pics/6relationship.jpg)
+
+![](pics/7study.jpg)
+
+![](pics/8free.jpg)
 
 There are many different things that contribute to the success of a student in school. Knowing which factors have the largest influence on student performance can help students and teachers decide where to focus their energy. I propose building a app that allows educators and students to visually see which factors will give them the highest chance of success. This app will allow the user to set their fix variables. Theses will be the things they can not change like gender and age. Then allow them to input additional variables to fit there situation. For example the classes they are taking. After this the app will display their most likely grade and what factors had the most influence.
 
