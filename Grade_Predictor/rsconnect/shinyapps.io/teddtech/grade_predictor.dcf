@@ -1,0 +1,10 @@
+name: grade_predictor
+title:
+username:
+account: teddtech
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 263999
+bundleId: 1196924
+url: https://teddtech.shinyapps.io/grade_predictor/
+when: 1517179636.22354

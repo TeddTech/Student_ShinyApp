@@ -3,10 +3,10 @@
 #Usage: This is a shiny app used to predict grades
 
 
-
+library(tidyverse)
 library(shiny)
 #Load data set and extract and mutate needed variables
-Student <- Student
+Student <- read.csv('https://raw.githubusercontent.com/TeddTech/Student_Performance/master/data/marks_data.csv')
 Student <- Student %>% mutate(G1 = G1/20, G2 = G2/20, G3 = G3/20)
 Student <- Student %>% mutate(G = (G1 + G2 +G3)/3)
 
@@ -71,10 +71,11 @@ server <- function(input, output) {
     #Plot each grade
     dat_bar <- data.frame(grade = c('1st Grade','2nd Grade','3rd Grade','Average Grade'), mark = c(G1,G2,G3,G))
     
-    ggplot(dat_bar, aes(x=grade, y=mark, fill=grade)) + geom_bar(stat = 'identity') + ggtitle('Grade Predictor') +
-      labs(y = 'GRADE PERCENTAGE', x = 'GRADES', legend = 'Grades') +
+    ggplot(dat_bar, aes(x=grade, y=mark, fill=grade)) + geom_bar(stat = 'identity', fill = 'orange') + ggtitle('Grade Predictor Plot') +
+      labs(y = 'GRADE PERCENTAGE', x = 'GRADES') +
       geom_text(aes(label=round(mark*100, 1)), vjust=10) +
-      scale_fill_manual( values = c( '1st Grade'='orange','2nd Grade'='orange','3rd Grade'='orange','Average Grade'='tomato'))
+      guides(fill=FALSE) +
+      theme_minimal()
       
     
     
