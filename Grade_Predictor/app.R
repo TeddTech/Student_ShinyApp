@@ -1,4 +1,3 @@
-
 # Ted Thompson 2018
 #Usage: This is a shiny app used to predict grades
 
